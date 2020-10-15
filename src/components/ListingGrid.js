@@ -1,11 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import {Link} from 'react-router-dom';
 import styled from 'styled-components';
 import {items} from "../data.js";
 import ItemDetails from "./ItemDetails.js";
 
 const ListingGrid = ({ itemList }) => {
-    let A = styled.a`
+    let Link_sty = styled(Link)`
         text-decoration:none;
         color: inherit; 
     `;
@@ -43,11 +44,11 @@ const ListingGrid = ({ itemList }) => {
     return <Div className="item-wrapper">
         {itemList.map((ele, ind)=>{
             return <Div_content key={`fruit-${ind}`} className="item-content">
-                <A href={`/items/${ele.id}`}>
+                <Link_sty to={`/items/${ele.id}`}>
                 <Img src={ele.imageSrc} alt={ele.name} />
                 <Div_name title="true">{ele.name}</Div_name>
                 <Div_name>{ele.latinName}</Div_name>
-                </A>
+                </Link_sty>
             </Div_content>
         })}
     </Div>;
