@@ -33,6 +33,7 @@ const Header = () => {
             <div>
                 <NAV to="/">HOME</NAV>
                 <NAV to="/about">ABOUT</NAV>
+                <NAV to="/sellers">SELLERS</NAV>
                 {/*<A_H href="/">HOME</A_H>
                 <A_H href="/about">ABOUT</A_H>*/}
             </div>
